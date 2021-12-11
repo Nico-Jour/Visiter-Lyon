@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+html{
+    font-family: 'Space Mono', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#home{
+    background-color: #FFC126;
+}
+
+#visit{
+    background-color: #127D87;
+}
+
+#eat{
+    background-color: #F34213;
+}
+
+#sleep{
+    background-color: #000;
+}
+
+#map{
+    background-color: #3E2F5B;
+}
+
+header {
+    background-color: #fff;
+    border-radius: 15px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+header .logo{
+    display: none;
+}
+
+header nav{
+    display: none;
+}
+
+header .page__title{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* liste du menu burger temporairement en display none,
+ enlever le DN pour naviguer entre les pages */
+
+header .menu__burger{
+display: none;
+}
