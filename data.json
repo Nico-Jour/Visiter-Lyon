@@ -1,0 +1,54 @@
+{
+    "restaurants": [
+      {
+        "nom": "Aux Retrouvailles",
+        "id": "R1",
+        "price": 35,
+        "city": "Lyon",
+        "country": "France",
+        "tags": ["Valeur sûre", "Typique"],
+        "tagline": "Cuisine typique, raffinée et généreuse",
+        "travelType":["En famille","En couple","Solo","Entre amis"],
+        "image": "zz.jpeg",
+        "likes":2357
+      },
+      {
+        "nom": "Brasserie George",
+        "id": "R2",
+        "price": 30,
+        "city": "Lyon",
+        "country": "France",
+        "tags": ["Valeur sûre", "Typique"],
+        "tagline": "Cuisine typique, raffinée et généreuse",
+        "travelType":["En famille","En couple","Solo","Entre amis"],
+        "image": ""
+      }
+    ],
+    "hostels": [
+      {
+        "id": "h1",
+        "name": "ho36 Guillotière",
+        "image": "",
+        "tags": [""],
+        "travelType":["En famille","En couple","Solo","Entre amis"],
+        "likes": 62,
+        "date": "2011-12-08",
+        "price": 55
+      },
+      {
+
+      }
+          
+    ],
+    "sights":[
+    {
+        "id": "S1",
+        "name": "Place des terreaux",
+        "price": 0,
+        "city":"Lyon",
+        "country":"France",
+        "traveltype":["En famille","En couple","Solo","Entre amis"],
+        "description":"Place "
+    }
+    ]
+  }
