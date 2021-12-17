@@ -23,6 +23,17 @@
         "travelType":["En famille","En couple","Solo","Entre amis"],
         "image": ""
       }
+      {
+        "nom": "Ouest Express",
+        "id": "R3",
+        "price": 15,
+        "city": "Lyon",
+        "country": "France",
+        "tags": ["Valeur sûre", "Fast Food"],
+        "tagline": "Cuisine typique, raffinée et généreuse",
+        "travelType":["En famille","En couple","Solo","Entre amis"],
+        "image": ""
+      }
     ],
     "hostels": [
       {
