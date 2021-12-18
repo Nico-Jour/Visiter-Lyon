@@ -7,44 +7,42 @@ html{
 #home{
     background-color: #FFC126;
     margin: 0;
-    padding: 15px;
+    padding: 10px;
     box-sizing: border-box;
 }
 
 #visit{
     background-color: #127D87;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 #eat{
     background-color: #F34213;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 #sleep{
     background-color: #000;
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 #map{
     background-color: #3E2F5B;
     margin: 0;
-    padding: 0;
+    padding: 15px;
 }
 
 header {
-    position: sticky;
-    top: 15px;
-    background-color: #fff;
+    background-color: #000;
     border-radius: 15px;
     width: 100%;
     height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 header .logo{
@@ -63,6 +61,7 @@ header .page__title{
 /* Création du cta burger animé */
 
 .cta__burger{
+    margin-right: 1em;
     height: 40px;
     width: 40px;
     cursor: pointer;
