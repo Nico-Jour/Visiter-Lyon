@@ -36,9 +36,12 @@ html{
 }
 
 header {
-    background-color: #000;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #fff;
     border-radius: 15px;
-    width: 100%;
+    width: calc(100% - 20px);
     height: 70px;
     display: flex;
     align-items: center;
@@ -56,6 +59,7 @@ header nav{
 header .page__title{
     font-size: 36px;
     font-weight: bold;
+    padding-left: 16px;
 }
 
 /* Création du cta burger animé */
@@ -77,6 +81,7 @@ header .page__title{
     display: block;
     position: absolute;
     top: 50%;
+    border-radius: 15px;
     transform: translateY(-50%);
     transition: background-color 0.5s ease-in-out;
 }
@@ -90,6 +95,7 @@ header .page__title{
     height: 4px;
     background-color: #000;
     transition: transform 0.5s ease-in-out;
+    border-radius: 15px;
 }
 
 /* Positionnement de la barre supérieure et inférieure */
@@ -118,9 +124,66 @@ header .page__title{
     transform: translateY(0px) rotateZ(-45deg);
 }
 
-/* liste du menu burger temporairement en display none,
- enlever le DN pour naviguer entre les pages */
+/* Menu Burger*/
 
  .menu__burger{
     display: none;
  }
+
+ .menu__burger.active{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px ;
+    
+ }
+
+ .menu__burger ul {
+     display: flex;
+     justify-content: space-around;
+     width: 100%;
+     padding-left: 0;
+ }
+
+ .menu__burger ul .picto__visit{
+    display: flex;
+    align-items: center;
+    border: 1px #127D87 solid ;
+    padding: 5px;
+    border-radius: 15px;
+ }
+ .menu__burger ul .picto__eat{
+    display: flex;
+    align-items: center;
+    border: 1px #F34213 solid ;
+    padding: 5px;
+    border-radius: 15px;
+ }
+ .menu__burger ul .picto__sleep{
+    display: flex;
+    align-items: center;
+    border: 1px #000 solid ;
+    padding: 5px;
+    border-radius: 15px;
+ }
+ .menu__burger ul .picto__map{
+    display: flex;
+    align-items: center;
+    border: 1px #3E2F5B solid ;
+    padding: 5px;
+    border-radius: 15px;
+ }
+
+.test{
+    margin-top: 75px;
+    background-color: #FFF;
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 100px;
+}
