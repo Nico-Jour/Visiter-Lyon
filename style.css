@@ -35,16 +35,28 @@ html{
     padding: 0;
 }
 
+.screen{
+    background-color: #F34213;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top:0;
+
+}
+
 header {
     position: sticky;
     top: 15px;
     background-color: #fff;
     border-radius: 15px;
-    width: 100%;
+    
+    width: auto;
     height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    margin: 15px 15px 0px 15px;
+    padding: 0px 25px 0px 25px;
+
 }
 
 header .logo{
@@ -58,6 +70,7 @@ header nav{
 header .page__title{
     font-size: 36px;
     font-weight: bold;
+    
 }
 
 /* Création du cta burger animé */
@@ -66,7 +79,9 @@ header .page__title{
     height: 40px;
     width: 40px;
     cursor: pointer;
-    position: relative;
+    position: absolute;
+    right: 25px;
+    
 }
 
 /* Création de la barre du milieu */
@@ -122,6 +137,107 @@ header .page__title{
 /* liste du menu burger temporairement en display none,
  enlever le DN pour naviguer entre les pages */
 
- .menu__burger{
+.menu__burger{
     display: none;
  }
+
+ 
+.restaurant-card{
+     background-color: white;
+     border-radius: 15px;
+     margin: 15px;
+     display: grid;
+     grid-template-columns: 3fr 1fr ;
+     padding:25px;
+     grid-template-areas: 
+         "title title"
+         "img img"
+         "adresse adresse"
+         "tagline tagline"
+         "description description"
+         "siteWeb siteWeb"
+         "tags likes"
+     ;
+    }
+
+.nomRestaurant{
+    
+    grid-area: title;
+    margin-block-start: 0;
+    
+}
+
+.imgRestaurant{
+    grid-area: img;
+    border-radius: 15px;
+    width: 100%;
+    
+}
+
+.adresse{
+    grid-area: adresse;
+    padding: 15px 0px 15px 0px;
+    display: inline-flex;
+    align-items: center;
+
+
+}
+ .adresse p{
+    margin-block-start: 0;
+    margin-block-end: 0; 
+    color: grey;
+ }
+
+ .adresse img{
+     width: 40px;
+     height: 40px;
+     padding-right: 10px;
+ }
+
+.tagline{
+    grid-area: tagline;
+    font-weight: bold;
+}
+
+.description{
+    grid-area: description;
+    max-width: 600px;
+}
+
+.siteWeb{
+    grid-area: siteWeb;
+    color: #F34213;
+    font-weight:bolder;
+    text-decoration: none;
+    padding:0px;
+}
+
+.tags{
+    grid-area: tags;
+    display: grid;
+    padding-inline-start: 0px;
+}
+
+li{
+    list-style: none;
+    font-style: italic;
+}
+
+.likes{
+    grid-area: likes;
+    text-align: center;
+    align-self: center;
+}
+.nbrLikes{
+    font-weight: bold;
+    color:red;
+}
+.space{
+    height: 150px;
+}
+
+
+ @media only screen and (min-width: 600px) {
+
+ }
+
