@@ -4,39 +4,48 @@ html{
     font-family: 'Space Mono', sans-serif;
 }
 
+:root{
+    --primary-color-red:#F34213;
+    --green:#127D87;
+    --black:#000;
+    --yellow:#FFC126;
+    --violet-dark:#3E2F5B;
+    --white:#FFF;
+}
+
 #home{
-    background-color: #FFC126;
+    background-color: var(--yellow);
     margin: 0;
     padding: 15px;
     box-sizing: border-box;
 }
 
 #visit{
-    background-color: #127D87;
+    background-color: var(--green);
     margin: 0;
     padding: 0;
 }
 
 #eat{
-    background-color: #F34213;
+    background-color: var(--primary-color-red);
     margin: 0;
     padding: 0;
 }
 
 #sleep{
-    background-color: #000;
+    background-color: var(--black);
     margin: 0;
     padding: 0;
 }
 
 #map{
-    background-color: #3E2F5B;
+    background-color: var(--violet-dark);
     margin: 0;
     padding: 0;
 }
 
 .screen{
-    background-color: #F34213;
+    background-color: var(--primary-color-red);
     position: fixed;
     width: 100%;
     height: 100px;
@@ -47,7 +56,7 @@ html{
 header {
     position: sticky;
     top: 15px;
-    background-color: #fff;
+    background-color: var(--white);
     border-radius: 15px;
     
     width: auto;
@@ -89,7 +98,7 @@ header .page__title{
 .cta__burger span{
     width: 100%;
     height: 4px;
-    background-color: #000;
+    background-color: var(--black);
     display: block;
     position: absolute;
     top: 50%;
@@ -104,7 +113,7 @@ header .page__title{
     position: absolute;
     width: 100%;
     height: 4px;
-    background-color: #000;
+    background-color: var(--black);
     transition: transform 0.5s ease-in-out;
 }
 
@@ -143,7 +152,7 @@ header .page__title{
 
  
 .restaurant-card{
-     background-color: white;
+     background-color: var(--white);
      border-radius: 15px;
      margin: 15px;
      display: grid;
@@ -206,7 +215,7 @@ header .page__title{
 
 .siteWeb{
     grid-area: siteWeb;
-    color: #F34213;
+    color: var(--primary-color-red);
     font-weight:bolder;
     text-decoration: none;
     padding:0px;
@@ -230,14 +239,38 @@ li{
 }
 .nbrLikes{
     font-weight: bold;
-    color:red;
+    color: var(--primary-color-red);
 }
 .space{
     height: 150px;
 }
 
+#map-integration{
+    width:auto;  
+}
+#map-integration iframe{
+    width: 100%;
+}
+}
 
- @media only screen and (min-width: 600px) {
+ @media only screen and (min-width: 480px) {
+    .restaurant-card{
+        background-color: var(--white);
+        border-radius: 15px;
+        margin: 15px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 2fr 1fr ;
+        padding:25px;
+        grid-template-areas: 
+            "title img"
+            "tagline img"
+            "description img"
+            "description adresse"
+            "description siteWeb"
+            "tags likes"
+        ;
+    }     
 
  }
 
