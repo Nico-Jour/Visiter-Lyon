@@ -35,6 +35,16 @@ html{
     padding: 15px;
 }
 
+.screen{
+    background-color: inherit;
+    width: 100%;
+    position: fixed;
+    height: 90px;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+
 header {
     position: fixed;
     top: 10px;
@@ -68,7 +78,6 @@ header .page__title{
     margin-right: 1em;
     height: 40px;
     width: 40px;
-    cursor: pointer;
     position: relative;
 }
 
@@ -151,39 +160,205 @@ header .page__title{
      padding-left: 0;
  }
 
- .menu__burger ul .picto__visit{
-    display: flex;
-    align-items: center;
-    border: 1px #127D87 solid ;
-    padding: 5px;
-    border-radius: 15px;
- }
- .menu__burger ul .picto__eat{
-    display: flex;
-    align-items: center;
-    border: 1px #F34213 solid ;
-    padding: 5px;
-    border-radius: 15px;
- }
- .menu__burger ul .picto__sleep{
-    display: flex;
-    align-items: center;
-    border: 1px #000 solid ;
-    padding: 5px;
-    border-radius: 15px;
- }
- .menu__burger ul .picto__map{
-    display: flex;
-    align-items: center;
-    border: 1px #3E2F5B solid ;
-    padding: 5px;
-    border-radius: 15px;
+ .menu__burger ul a {
+     align-self: center;
  }
 
-.test{
-    margin-top: 75px;
+.slogan{
     background-color: #FFF;
     width: 100%;
     border-radius: 15px;
-    margin-bottom: 100px;
+    margin-top: 80px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.slogan .title__desktop{
+    display: none;
+}
+/* Création du slider */
+
+.slider{
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 25s slider infinite;
+}
+
+.slider figure img{
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider {
+    0%{
+        left: 0;
+    }
+
+    20%{
+        left: 0;
+    }
+
+    25%{
+        left: -100%;
+    }
+
+    35%{
+        left: -100%;
+    }
+
+    50%{
+        left: -200% ;
+    }
+
+    60%{
+        left: -200%;
+    }
+    
+    65%{
+        left: -300%;
+    }
+
+    75%{
+        left: -300%;
+    }
+
+    80%{
+        left: -400%;
+    }
+
+    95%{
+        left: -400%;
+    }
+
+    100%{
+        left: 0%;
+    }
+}
+
+.about{
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.about h3{
+    margin: 0;
+    text-align: center;
+}
+
+
+@media screen and (min-width : 1024px) {
+
+    header{
+        justify-content: space-between;
+    }
+    
+    header .cta__burger{
+        display: none;
+    }
+
+    header .page__title{
+        display: none;
+    }
+
+    header .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    header .logo img{
+        height: auto;
+        width: 45%;
+        height: auto;
+    }
+
+    header nav{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav ul a{
+        text-decoration: none;
+        font-size: 20px;
+        color: #000;
+        position: relative;
+    }
+
+    a::after {
+        content: '';
+        transform-origin: 0 0; 
+        transform: scaleX(0);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px; 
+        background: #000;
+        z-index: -1;
+        opacity: 0.8;
+        transition: transform .3s;
+      }
+      a:hover::after {
+        transform: scaleX(1);
+      }
+    
+    .slogan{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        padding: 15px;
+    }
+
+    .slogan .title__desktop{
+        display: block;
+        margin: 0;
+    }
+
+    .slogan p{
+        margin: 0;
+    }
+
+    .wrapper__slider{
+        width: auto;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .slider{
+        max-width: 800px;
+        height: auto;
+        margin: auto;
+    }
+
+    .menu__burger{
+        display: none;
+    }
+
+    .about{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: justify;
+    }
 }
