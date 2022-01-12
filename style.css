@@ -156,7 +156,7 @@ header .page__title{
 .restaurant-card{
      background-color: var(--white);
      border-radius: 15px;
-     margin: 15px;
+     margin: 15px auto 15px auto;
      display: grid;
      grid-template-columns: 3fr 1fr ;
      padding:25px;
