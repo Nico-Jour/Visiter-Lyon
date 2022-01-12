@@ -58,7 +58,7 @@ header {
     justify-content: space-between;
 }
 
-header .logo{
+header .logo img{
     display: none;
 }
 
@@ -66,10 +66,9 @@ header nav{
     display: none;
 }
 
-header .page__title{
-    font-size: 36px;
-    font-weight: bold;
+header h1{
     padding-left: 16px;
+    font-size: 25px;
 }
 
 /* Création du cta burger animé */
@@ -268,7 +267,7 @@ header .page__title{
         display: none;
     }
 
-    header .page__title{
+    header h1{
         display: none;
     }
 
@@ -278,9 +277,9 @@ header .page__title{
     }
 
     header .logo img{
+        display: block;
         height: auto;
         width: 45%;
-        height: auto;
     }
 
     header nav{
@@ -359,6 +358,15 @@ header .page__title{
         display: flex;
         flex-direction: column;
         align-items: center;
-        text-align: justify;
+        text-align: center;
     }
+
+    .about h3{
+        padding: 2em;
+    }
+
+    .about .about__description{
+        max-width: 800px;
+    }
+
 }
