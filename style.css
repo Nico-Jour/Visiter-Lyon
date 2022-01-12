@@ -4,6 +4,7 @@ html{
     font-family: 'Space Mono', sans-serif;
 }
 
+
 :root{
     --primary-color-red:#F34213;
     --green:#127D87;
@@ -12,6 +13,7 @@ html{
     --violet-dark:#3E2F5B;
     --white:#FFF;
 }
+
 
 #home{
     background-color: var(--yellow);
@@ -28,8 +30,8 @@ html{
 
 #eat{
     background-color: var(--primary-color-red);
-    margin: 0;
-    padding: 0;
+    
+    padding: 15px;
 }
 
 #sleep{
@@ -63,7 +65,7 @@ header {
     height: 70px;
     display: flex;
     align-items: center;
-    margin: 15px 15px 0px 15px;
+    margin: 0px;
     padding: 0px 25px 0px 25px;
 
 }
@@ -180,14 +182,17 @@ header .page__title{
     grid-area: img;
     border-radius: 15px;
     width: 100%;
+    height: 100%;
+    overflow: visible;
     
 }
 
 .adresse{
     grid-area: adresse;
-    padding: 15px 0px 15px 0px;
+    padding: 1em 0px 1em 0px;
     display: inline-flex;
     align-items: center;
+    cursor:pointer;
 
 
 }
@@ -205,7 +210,7 @@ header .page__title{
 
 .tagline{
     grid-area: tagline;
-    font-weight: bold;
+    font-size: 20px;
 }
 
 .description{
@@ -216,14 +221,14 @@ header .page__title{
 .siteWeb{
     grid-area: siteWeb;
     color: var(--primary-color-red);
-    font-weight:bolder;
     text-decoration: none;
-    padding:0px;
+    padding: 1em;
 }
 
 .tags{
     grid-area: tags;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     padding-inline-start: 0px;
 }
 
@@ -245,19 +250,18 @@ li{
     height: 150px;
 }
 
-#map-integration{
-    width:auto;  
-}
-#map-integration iframe{
-    width: 100%;
-}
-}
+
 
  @media only screen and (min-width: 480px) {
+    .page__title{
+        font-style: italic;
+    }
     .restaurant-card{
+        max-width: 1100px;
         background-color: var(--white);
         border-radius: 15px;
-        margin: 15px;
+        margin: 15px auto 15px auto;
+        padding: 25px;
         display: grid;
         grid-gap: 5px;
         grid-template-columns: 2fr 1fr ;
@@ -266,11 +270,28 @@ li{
             "title img"
             "tagline img"
             "description img"
-            "description adresse"
-            "description siteWeb"
+            "tags adresse"
+            "tags siteWeb"
             "tags likes"
         ;
-    }     
+    }   
+    .imgRestaurant{
+ 
+    }  
+    .tags{
+        background-color: var(--white);
+        border-radius: 15px;
+        witdh: 100%;
+        justify-content: center;
+    }
+    .adresse{
+        margin: auto;
+    }
+    .siteWeb{
+        margin: auto;
+        text-align: center;
+    }
+
 
  }
 
