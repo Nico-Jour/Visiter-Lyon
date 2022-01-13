@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link href="locatorplus.css" rel="stylesheet">
-    <script src="locatorplus.js"></script>
-    <script>
-      const CONFIGURATION = {
-        "locations": [
-          {"title":"Death Valley National Park","address1":"California","address2":"United States","coords":{"lat":36.4617,"lng":-116.8668},"placeId":"ChIJR4qudndLx4ARVLDye3zwycw"}
-        ],
-        "mapOptions": {"center":{"lat":38.0,"lng":-100.0},"fullscreenControl":true,"mapTypeControl":false,"streetViewControl":false,"zoom":4,"zoomControl":true,"maxZoom":17},
-        "mapsApiKey": "YOUR_API_KEY_HERE"
-      };
 
-      function initMap() {
-        new LocatorPlus(CONFIGURATION);
-      }
-    </script>
-    <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
-      {{#each locations}}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/handlebars/4.7.7/handlebars.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link href="locatorplus.css" rel="stylesheet">
+  <script src="locatorplus.js"></script>
+  <script>
+    const CONFIGURATION = {
+      "locations": [{
+        "title": "Death Valley National Park",
+        "address1": "California",
+        "address2": "United States",
+        "coords": {
+          "lat": 36.4617,
+          "lng": -116.8668
+        },
+        "placeId": "ChIJR4qudndLx4ARVLDye3zwycw"
+      }],
+      "mapOptions": {
+        "center": {
+          "lat": 38.0,
+          "lng": -100.0
+        },
+        "fullscreenControl": true,
+        "mapTypeControl": false,
+        "streetViewControl": false,
+        "zoom": 4,
+        "zoomControl": true,
+        "maxZoom": 17
+      },
+      "mapsApiKey": "YOUR_API_KEY_HERE"
+    };
+
+    function initMap() {
+      new LocatorPlus(CONFIGURATION);
+    }
+  </script>
+  <script id="locator-result-items-tmpl" type="text/x-handlebars-template">
+    {{#each locations}}
         <li class="location-result" data-location-index="{{index}}">
           <button class="select-location">
             <h2 class="name">{{title}}</h2>
@@ -33,56 +52,55 @@
         </li>
       {{/each}}
     </script>
-    <title>Se repérer dans Lyon</title>
+  <title>Se repérer dans Lyon</title>
 
 </head>
+
 <body id="map">
-    <header>
-        <div class="logo">
-            <img src="" alt="logo">
-        </div>
-        <nav>
-          <ul>
-              <a href="home.html">Accueil</a>
-              <a href="visit.html">Visiter</a>
-              <a href="eat.html">Manger</a>
-              <a href="sleep.html">Dormir</a>
-              <a href="map.html">Se repérer</a>
-          </ul>  
-        </nav>
-
-        <p class="page__title">
-            PLAN
-        </p>
-        
-        <div class="cta__burger">
-            <span></span>
-        </div>
-    </header>
-<<<<<<< HEAD
-    <section id="map-integration">
-        
-    </section>
-=======
-
-
-    <div class="menu__burger">
-        <ul>
-            <a href="visit.html">
-                <img src="/assets/picto_menu/picto-visiter.svg" alt="Pictogramme Visiter" >
-            <a href="eat.html">
-                <img src="/assets/picto_menu/picto-manger.svg" alt="Pictogramme Manger" >
-            </a>
-            <a href="sleep.html">
-                <img src="/assets/picto_menu/picto-dormir.svg" alt="Pictogramme Dormir" >
-            </a>
-            <a href="map.html">
-                <img src="/assets/picto_menu/picto-map.svg" alt="Pictogramme Carte" >
-            </a>
-            
-        </ul>
+  <header>
+    <div class="logo">
+      <img src="" alt="logo">
     </div>
->>>>>>> origin/main
-    <script src="script.js"></script>
+    <nav>
+      <ul>
+        <a href="home.html">Accueil</a>
+        <a href="visit.html">Visiter</a>
+        <a href="eat.html">Manger</a>
+        <a href="sleep.html">Dormir</a>
+        <a href="map.html">Se repérer</a>
+      </ul>
+    </nav>
+
+    <p class="page__title">
+      PLAN
+    </p>
+
+    <div class="cta__burger">
+      <span></span>
+    </div>
+  </header>
+  <section id="map-integration">
+
+  </section>
+
+
+  <div class="menu__burger">
+    <ul>
+      <a href="visit.html">
+        <img src="/assets/picto_menu/picto-visiter.svg" alt="Pictogramme Visiter">
+        <a href="eat.html">
+          <img src="/assets/picto_menu/picto-manger.svg" alt="Pictogramme Manger">
+        </a>
+        <a href="sleep.html">
+          <img src="/assets/picto_menu/picto-dormir.svg" alt="Pictogramme Dormir">
+        </a>
+        <a href="map.html">
+          <img src="/assets/picto_menu/picto-map.svg" alt="Pictogramme Carte">
+        </a>
+
+    </ul>
+  </div>
+  <script src="script.js"></script>
 </body>
+
 </html>
