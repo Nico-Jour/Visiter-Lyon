@@ -60,7 +60,8 @@ html{
 header {
     position: fixed;
     top: 15px;
-    left: 15px;
+    left: 50%;
+    margin-left: calc(-50vw + 15px);
     background-color: var(--white);
     border-radius: 15px;
     width: calc(100% - 30px);
@@ -178,7 +179,7 @@ header h1{
 .slogan{
    background-color: var(--white);
    width: 100%;
-   max-width: 1100px;
+   max-width: 1110px;
    border-radius: 15px;
    margin: 85px auto 10px auto;
    display: flex;
@@ -354,9 +355,11 @@ header h1{
 
    .wrapper__slider{
        width: auto;
+       max-width: 1100px;
        background-color: var(--white);
        border-radius: 15px;
        padding: 20px;
+       margin: 15px auto 15px auto;
    }
 
    .slider{
