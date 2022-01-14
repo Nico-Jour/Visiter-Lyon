@@ -317,6 +317,12 @@ header h1{
        color: #000;
        position: relative;
    }
+
+   .about {
+       max-width: 1100px;
+       margin: 5px auto 5px auto;
+   }
+
    /* Animation hover */
    a::after {
        content: '';
@@ -406,7 +412,6 @@ header h1{
     }
 
 .nomRestaurant{
-    
     grid-area: title;
     margin-block-start: 0;
     
@@ -486,7 +491,7 @@ li{
 
 
  @media only screen and (min-width: 480px) {
-    .restaurant-card{
+    .restaurant-card {
         max-width: 1100px;
         background-color: var(--white);
         border-radius: 15px;
@@ -551,7 +556,7 @@ li{
     
 }
 
-.siteWebvisit{
+.siteWebVisit{
     grid-area: siteWeb;
     color: #127D87;
     font-weight:bolder;
@@ -559,10 +564,36 @@ li{
     padding:0px;
 }
 
-.nbrLikesvisit{
+.nbrLikesVisit{
     font-weight: bold;
     color:#127D87;
 }
+
+@media only screen and (min-width: 480px) {
+    .visit-card{
+        max-width: 1100px;
+        background-color: var(--white);
+        border-radius: 15px;
+        margin: 15px auto 15px auto;
+        padding: 25px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 2fr 1fr ;
+        padding:25px;
+        grid-template-areas: 
+            "title img"
+            "tagline img"
+            "description img"
+            "tags adresse"
+            "tags siteWeb"
+            "tags likes"
+        ;
+    }   
+
+    .siteWebVisit{
+        margin: auto;
+        text-align: center;
+    }
 
 /*style hotel card*/
 .hotel-card{
@@ -594,7 +625,7 @@ li{
     width: 100%; 
 }
 
-.siteWebhotel{
+.siteWebHotel{
     grid-area: siteWeb;
     color: black;
     font-weight:bolder;
@@ -608,8 +639,28 @@ li{
 }
 
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 480px) {
+    .hotel-card{
+        max-width: 1100px;
+        background-color: var(--white);
+        border-radius: 15px;
+        margin: 15px auto 15px auto;
+        padding: 25px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 2fr 1fr ;
+        padding:25px;
+        grid-template-areas: 
+            "title img"
+            "tagline img"
+            "description img"
+            "tags adresse"
+            "tags siteWeb"
+            "tags likes"
+        ;
+    }   
 
-
-}
-
+    .siteWebHotel{
+        margin: auto;
+        text-align: center;
+    }
