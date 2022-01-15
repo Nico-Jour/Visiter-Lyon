@@ -43,7 +43,7 @@ html{
 #map2{
     background-color: var(--violet-dark);
     margin: 0;
-    padding: 15px;
+    padding: 0px;
 }
 
 .screen{
@@ -500,7 +500,7 @@ li{
         max-width: 70px;
     }
     .restaurant-card {
-        max-width: 1100px;
+        max-width: 1095px;
         background-color: var(--white);
         border-radius: 15px;
         margin: 15px auto 15px auto;
@@ -534,7 +534,7 @@ li{
 
     /*style visit card 480*/
     .visit-card{
-        max-width: 1100px;
+        max-width: 1095px;
         background-color: var(--white);
         border-radius: 15px;
         margin: 15px auto 15px auto;
@@ -560,7 +560,7 @@ li{
     
 /*style page hotel*/
     .hotel-card{
-        max-width: 1100px;
+        max-width: 1095px;
         background-color: var(--white);
         border-radius: 15px;
         margin: 15px auto 15px auto;
