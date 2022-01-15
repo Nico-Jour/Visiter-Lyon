@@ -523,14 +523,91 @@ li{
     .siteWeb{
         margin: auto;
         text-align: center;
+    } 
+
+    /*style visit card 480*/
+    .visit-card{
+        max-width: 1100px;
+        background-color: var(--white);
+        border-radius: 15px;
+        margin: 15px auto 15px auto;
+        padding: 25px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 2fr 1fr ;
+        padding:25px;
+        grid-template-areas: 
+            "title img"
+            "tagline img"
+            "description img"
+            "tags adresse"
+            "tags siteWeb"
+            "tags likes"
+        ;
+    }   
+
+    .siteWebVisit{
+        margin: auto;
+        text-align: center;
+    }
+    
+/*style page hotel*/
+    .hotel-card{
+        max-width: 1100px;
+        background-color: var(--white);
+        border-radius: 15px;
+        margin: 15px auto 15px auto;
+        padding: 25px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 2fr 1fr ;
+        padding:25px;
+        grid-template-areas: 
+            "title img"
+            "tagline img"
+            "description img"
+            "tags adresse"
+            "tags siteWeb"
+            "tags likes"
+        ;
+    }   
+    
+    .siteWebHotel{
+        margin: auto;
+        text-align: center;
     }
 }
+
+    .visit-card{
+        max-width: 1100px;
+        background-color: var(--white);
+        border-radius: 15px;
+        margin: 15px auto 15px auto;
+        padding: 25px;
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 2fr 1fr ;
+        padding:25px;
+        grid-template-areas: 
+            "title img"
+            "tagline img"
+            "description img"
+            "tags adresse"
+            "tags siteWeb"
+            "tags likes"
+        ;
+    }   
+
+    .siteWebVisit{
+        margin: auto;
+        text-align: center;
+    }
 
 /*style visit card*/
 .visit-card{
     background-color: white;
     border-radius: 15px;
-    margin: 15px;
+    margin: 15px auto 15px auto;
     display: grid;
     grid-template-columns: 3fr 1fr ;
     padding:25px;
@@ -570,37 +647,11 @@ li{
     color:#127D87;
 }
 
-@media only screen and (min-width: 480px) {
-    .visit-card{
-        max-width: 1100px;
-        background-color: var(--white);
-        border-radius: 15px;
-        margin: 15px auto 15px auto;
-        padding: 25px;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 2fr 1fr ;
-        padding:25px;
-        grid-template-areas: 
-            "title img"
-            "tagline img"
-            "description img"
-            "tags adresse"
-            "tags siteWeb"
-            "tags likes"
-        ;
-    }   
-
-    .siteWebVisit{
-        margin: auto;
-        text-align: center;
-    }
-
 /*style hotel card*/
 .hotel-card{
     background-color: white;
     border-radius: 15px;
-    margin: 15px;
+    margin: 15px auto 15px auto;
     display: grid;
     grid-template-columns: 3fr 1fr ;
     padding:25px;
@@ -638,34 +689,3 @@ li{
     font-weight: bold;
     color:black;
 }
-
-
-@media only screen and (min-width: 480px) {
-    .hotel-card{
-        max-width: 1100px;
-        background-color: var(--white);
-        border-radius: 15px;
-        margin: 15px auto 15px auto;
-        padding: 25px;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 2fr 1fr ;
-        padding:25px;
-        grid-template-areas: 
-            "title img"
-            "tagline img"
-            "description img"
-            "tags adresse"
-            "tags siteWeb"
-            "tags likes"
-        ;
-    }   
-    
-    .siteWebHotel{
-        margin: auto;
-        text-align: center;
-    }
-}
-
-
-
