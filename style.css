@@ -1,57 +1,57 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-html{
+html {
     font-family: 'Space Mono', sans-serif;
 }
 
 
-:root{
-    --primary-color-red:#F34213;
-    --green:#127D87;
-    --black:#000;
-    --yellow:#FFC126;
-    --violet-dark:#3E2F5B;
-    --white:#FFF;
+:root {
+    --primary-color-red: #F34213;
+    --green: #127D87;
+    --black: #000;
+    --yellow: #FFC126;
+    --violet-dark: #3E2F5B;
+    --white: #FFF;
 }
 
 
-#home{
+#home {
     background-color: var(--yellow);
     margin: 0;
     padding: 15px;
     box-sizing: border-box;
 }
 
-#visit{
+#visit {
     background-color: var(--green);
     margin: 0;
     padding: 15px;
 }
 
-#eat{
+#eat {
     background-color: var(--primary-color-red);
     margin: 0px;
     padding: 15px;
 }
 
-#sleep{
+#sleep {
     background-color: var(--black);
     margin: 0;
     padding: 15px;
 }
 
-#map2{
+#map2 {
     background-color: var(--violet-dark);
     margin: 0;
     padding: 0px;
 }
 
-.screen{
+.screen {
     background-color: inherit;
     position: fixed;
     width: 100vw;
     height: 95px;
-    top:0;
+    top: 0;
     left: 0px;
     z-index: 1;
     padding: 0px;
@@ -71,27 +71,27 @@ header {
     justify-content: space-between;
 }
 
-header .logo{
+header .logo {
     display: flex;
     justify-content: center;
 }
 
-header .logo img{
+header .logo img {
     max-width: 50px;
 }
 
-header nav{
+header nav {
     display: none;
 }
 
-header h1{
+header h1 {
     padding-left: 16px;
     font-size: 25px;
 }
 
 /* Création du cta burger animé */
 
-.cta__burger{
+.cta__burger {
     height: 40px;
     width: 40px;
     position: relative;
@@ -100,7 +100,7 @@ header h1{
 
 /* Création de la barre du milieu */
 
-.cta__burger span{
+.cta__burger span {
     width: 100%;
     height: 4px;
     background-color: var(--black);
@@ -114,7 +114,8 @@ header h1{
 
 /* Utilisation des pseudo élements pour créer les deux autres barres */
 
-.cta__burger span::before, .cta__burger span::after{
+.cta__burger span::before,
+.cta__burger span::after {
     content: '';
     position: absolute;
     width: 100%;
@@ -126,48 +127,48 @@ header h1{
 
 /* Positionnement de la barre supérieure et inférieure */
 
-.cta__burger span::before{
+.cta__burger span::before {
     transform: translateY(-10px);
 }
 
-.cta__burger span::after{
+.cta__burger span::after {
     transform: translateY(10px);
 }
 
 /* Onclick, ajout de la classe open, disparition de la barre du milieu */
 
-.cta__burger.open span{
+.cta__burger.open span {
     background-color: transparent;
 }
 
 /* Onclik rotation des deux barres restantes pour former une croix */
 
-.cta__burger.open span::before{
+.cta__burger.open span::before {
     transform: translateY(0px) rotateZ(45deg);
 }
 
-.cta__burger.open span::after{
+.cta__burger.open span::after {
     transform: translateY(0px) rotateZ(-45deg);
 }
 
 /* Menu Burger*/
 
-.menu__burger{
+.menu__burger {
     display: none;
 }
 
-.menu__burger.active{
-   position: fixed;
-   left: 0;
-   bottom: 0;
-   width: 100vw;
-   height: 100px;
-   background-color: var(--white);
-   display: flex;
-   align-items: center;
-   border-top-left-radius: 15px;
-   border-top-right-radius: 15px ;
-   
+.menu__burger.active {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100px;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+
 }
 
 .menu__burger ul {
@@ -181,248 +182,254 @@ header h1{
     align-self: center;
 }
 
-.slogan{
-   background-color: var(--white);
-   width: 100%;
-   max-width: 1110px;
-   border-radius: 15px;
-   margin: 85px auto 10px auto;
-   
-   display: flex;
-   text-align: center;
-   justify-content: center;
+.slogan {
+    background-color: var(--white);
+    width: 100%;
+    max-width: 1110px;
+    border-radius: 15px;
+    margin: 85px auto 10px auto;
+
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }
 
-.slogan .title__desktop{
-   display: none;
+.slogan .title__desktop {
+    display: none;
 }
 
-.page__title{
+.page__title {
     display: none;
 }
 
 /* Création du slider */
 
-.slider{
-   overflow: hidden;
-   margin-top: 10px;
-   border-radius: 15px;
+.slider {
+    overflow: hidden;
+    margin-top: 10px;
+    border-radius: 15px;
 }
 
-.slider figure{
-   position: relative;
-   width: 500%;
-   margin: 0;
-   left: 0;
-   animation: 25s slider infinite;
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 25s slider infinite;
 }
 
-.slider figure img{
-   width: 20%;
-   float: left;
+.slider figure img {
+    width: 20%;
+    float: left;
 }
 
 @keyframes slider {
-   0%{
-       left: 0;
-   }
+    0% {
+        left: 0;
+    }
 
-   20%{
-       left: 0;
-   }
+    20% {
+        left: 0;
+    }
 
-   25%{
-       left: -100%;
-   }
+    25% {
+        left: -100%;
+    }
 
-   35%{
-       left: -100%;
-   }
+    35% {
+        left: -100%;
+    }
 
-   50%{
-       left: -200% ;
-   }
+    50% {
+        left: -200%;
+    }
 
-   60%{
-       left: -200%;
-   }
-   
-   65%{
-       left: -300%;
-   }
+    60% {
+        left: -200%;
+    }
 
-   75%{
-       left: -300%;
-   }
+    65% {
+        left: -300%;
+    }
 
-   80%{
-       left: -400%;
-   }
+    75% {
+        left: -300%;
+    }
 
-   95%{
-       left: -400%;
-   }
+    80% {
+        left: -400%;
+    }
 
-   100%{
-       left: 0%;
-   }
+    95% {
+        left: -400%;
+    }
+
+    100% {
+        left: 0%;
+    }
 }
 
-.about{
-   background-color: var(--white);
-   margin-top: 10px;
-   border-radius: 15px;
-   padding: 10px;
+.about {
+    background-color: var(--white);
+    margin-top: 10px;
+    border-radius: 15px;
+    padding: 10px;
 }
 
-.about h3{
-   margin: 0;
-   text-align: center;
+.about h3 {
+    margin: 0;
+    text-align: center;
 }
 
 
 @media screen and (min-width : 1024px) {
 
-   header{
-       justify-content: space-between;
-   }
-   
-   header .cta__burger{
-       display: none;
-   }
-
-   header h1{
-       display: none;
-   }
-
-   header .logo{
-       padding-left: 10px;
-   }
-   header .logo img{
-       max-width: 100%;
-   }
-
-   header nav{
-       display: flex;
-       justify-content: space-around;
-       width: 50%;
-   }
-
-   nav ul {
-       display: flex;
-       justify-content: space-around;
-       padding: 0;
-       width: 100%;
-   }
-
-   nav ul a{
-       text-decoration: none;
-       font-size: 20px;
-       color: #000;
-       position: relative;
-   }
-
-   .about {
-       max-width: 1100px;
-       margin: 5px auto 5px auto;
-   }
-
-   /* Animation hover */
-   nav ul a::after {
-       content: '';
-       transform-origin: 0 0; 
-       transform: scaleX(0);
-       position: absolute;
-       bottom: 0;
-       left: 0;
-       right: 0;
-       height: 2px; 
-       background: #000;
-       z-index: -1;
-       opacity: 0.8;
-       transition: transform 0.3s ease-in-out;
-     }
-     nav ul a:hover::after {
-       transform: scaleX(1);
+    header {
+        justify-content: space-between;
     }
-   
-   .slogan{
-       display: flex;
-       align-items: center;
-       flex-direction: column;
-       width: auto;
-       padding: 50px 15px 50px 15px;
-   }
 
-   .slogan .title__desktop{
-       display: block;
-       margin: 0;
-   }
-
-   .slogan p{
-       margin: 0;
-   }
-
-   .wrapper__slider{
-       width: auto;
-       max-width: 1100px;
-       background-color: var(--white);
-       border-radius: 15px;
-       padding: 20px;
-       margin: 15px auto 15px auto;
-   }
-
-   .slider{
-       max-width: 800px;
-       height: auto;
-       margin: auto;
-   }
-
-   
-   .about{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       text-align: center;
-       max-width: 1120px;
+    header .cta__burger {
+        display: none;
     }
-    
-    .about h3{
+
+    header h1 {
+        display: none;
+    }
+
+    header .logo {
+        padding-left: 10px;
+    }
+
+    header .logo img {
+        max-width: 100%;
+    }
+
+    header nav {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        width: 100%;
+    }
+
+    nav ul a {
+        text-decoration: none;
+        font-size: 20px;
+        color: #000;
+        position: relative;
+    }
+
+    .about {
+        max-width: 1100px;
+        margin: 5px auto 5px auto;
+    }
+
+    /* Animation hover */
+    nav ul a::after {
+        content: '';
+        transform-origin: 0 0;
+        transform: scaleX(0);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: #000;
+        z-index: -1;
+        opacity: 0.8;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul a:hover::after {
+        transform: scaleX(1);
+    }
+
+    .slogan {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: auto;
+        padding: 50px 15px 50px 15px;
+    }
+
+    .slogan .title__desktop {
+        display: block;
+        margin: 0;
+    }
+
+    .slogan p {
+        margin: 0;
+    }
+
+    .wrapper__slider {
+        width: auto;
+        max-width: 1100px;
+        background-color: var(--white);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px auto 15px auto;
+    }
+
+    .slider {
+        max-width: 800px;
+        height: auto;
+        margin: auto;
+    }
+
+
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 1120px;
+    }
+
+    .about h3 {
         padding: 2em;
     }
-    
-    .about .about__description{
+
+    .about .about__description {
         max-width: 800px;
         padding-bottom: 2em;
     }
-    
-}
- 
-.restaurant-card{
-     background-color: var(--white);
-     border-radius: 15px;
-     margin: 15px auto 15px auto;
-     display: grid;
-     grid-template-columns: 3fr 1fr ;
-     padding:25px;
-     grid-template-areas: 
-         "title title"
-         "img img"
-         "adresse adresse"
-         "tagline tagline"
-         "description description"
-         "siteWeb siteWeb"
-         "tags likes"
-     ;
+
+    .about__footer{
+        max-width: 1120px;
     }
 
-.nomRestaurant{
-    grid-area: title;
-    margin-block-start: 0;
-    
 }
 
-.imgRestaurant{
+.restaurant-card {
+    background-color: var(--white);
+    border-radius: 15px;
+    margin: 15px auto 15px auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: 25px;
+    grid-template-areas:
+        "title title"
+        "img img"
+        "adresse adresse"
+        "tagline tagline"
+        "description description"
+        "siteWeb siteWeb"
+        "tags likes"
+    ;
+}
+
+.nomRestaurant {
+    grid-area: title;
+    margin-block-start: 0;
+
+}
+
+.imgRestaurant {
     grid-area: img;
     border-radius: 15px;
     width: 100%;
@@ -431,75 +438,79 @@ header h1{
 
 }
 
-.adresse{
+.adresse {
     grid-area: adresse;
     padding: 1em 0px 1em 0px;
     display: inline-flex;
     align-items: center;
-    cursor:pointer;
+    cursor: pointer;
 }
- .adresse p{
+
+.adresse p {
     margin-block-start: 0;
-    margin-block-end: 0; 
+    margin-block-end: 0;
     color: grey;
- }
+}
 
- .adresse img{
-     width: 40px;
-     height: 40px;
-     padding-right: 10px;
- }
+.adresse img {
+    width: 40px;
+    height: 40px;
+    padding-right: 10px;
+}
 
-.tagline{
+.tagline {
     grid-area: tagline;
     font-size: 20px;
 }
 
-.description{
+.description {
     grid-area: description;
     max-width: 600px;
     text-align: justify;
 }
 
-.siteWeb{
+.siteWeb {
     grid-area: siteWeb;
     padding: 1em;
     color: #F34213;
-    font-weight:bolder;
+    font-weight: bolder;
     text-decoration: underline;
 }
 
-.tags{
+.tags {
     grid-area: tags;
     display: flex;
     flex-direction: column;
     padding-inline-start: 0px;
 }
 
-li{
+li {
     list-style: none;
     font-style: italic;
 }
 
-.likes{
+.likes {
     grid-area: likes;
     text-align: center;
     align-self: center;
 }
-.nbrLikes{
+
+.nbrLikes {
     font-weight: bold;
     color: var(--primary-color-red);
 }
-.space{
+
+.space {
     height: 150px;
 }
 
 
- @media only screen and (min-width: 480px) {
+@media only screen and (min-width: 480px) {
 
-    header .logo img{
+    header .logo img {
         max-width: 70px;
     }
+
     .restaurant-card {
         max-width: 1095px;
         background-color: var(--white);
@@ -508,9 +519,9 @@ li{
         padding: 25px;
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: 2fr 1fr ;
-        padding:25px;
-        grid-template-areas: 
+        grid-template-columns: 2fr 1fr;
+        padding: 25px;
+        grid-template-areas:
             "title img"
             "tagline img"
             "description img"
@@ -518,23 +529,25 @@ li{
             "tags siteWeb"
             "tags likes"
         ;
-    }   
-     
-    .tags{
+    }
+
+    .tags {
         border-radius: 15px;
         width: 100%;
         justify-content: center;
     }
-    .adresse{
+
+    .adresse {
         margin: auto;
     }
-    .siteWeb{
+
+    .siteWeb {
         margin: auto;
         text-align: center;
-    } 
+    }
 
     /*style visit card 480*/
-    .visit-card{
+    .visit-card {
         max-width: 1095px;
         background-color: var(--white);
         border-radius: 15px;
@@ -542,9 +555,9 @@ li{
         padding: 25px;
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: 2fr 1fr ;
-        padding:25px;
-        grid-template-areas: 
+        grid-template-columns: 2fr 1fr;
+        padding: 25px;
+        grid-template-areas:
             "title img"
             "tagline img"
             "description img"
@@ -552,15 +565,15 @@ li{
             "tags siteWeb"
             "tags likes"
         ;
-    }   
+    }
 
-    .siteWebVisit{
+    .siteWebVisit {
         margin: auto;
         text-align: center;
     }
-    
-/*style page hotel*/
-    .hotel-card{
+
+    /*style page hotel*/
+    .hotel-card {
         max-width: 1095px;
         background-color: var(--white);
         border-radius: 15px;
@@ -568,9 +581,9 @@ li{
         padding: 25px;
         display: grid;
         grid-gap: 5px;
-        grid-template-columns: 2fr 1fr ;
-        padding:25px;
-        grid-template-areas: 
+        grid-template-columns: 2fr 1fr;
+        padding: 25px;
+        grid-template-areas:
             "title img"
             "tagline img"
             "description img"
@@ -578,48 +591,49 @@ li{
             "tags siteWeb"
             "tags likes"
         ;
-    }   
-    
-    .siteWebHotel{
+    }
+
+    .siteWebHotel {
         margin: auto;
         text-align: center;
     }
+
 }
 
-    .visit-card{
-        max-width: 1100px;
-        background-color: var(--white);
-        border-radius: 15px;
-        margin: 15px auto 15px auto;
-        padding: 25px;
-        display: grid;
-        grid-gap: 5px;
-        grid-template-columns: 2fr 1fr ;
-        padding:25px;
-        grid-template-areas: 
-            "title img"
-            "tagline img"
-            "description img"
-            "tags adresse"
-            "tags siteWeb"
-            "tags likes"
-        ;
-    }   
+.visit-card {
+    max-width: 1100px;
+    background-color: var(--white);
+    border-radius: 15px;
+    margin: 15px auto 15px auto;
+    padding: 25px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 2fr 1fr;
+    padding: 25px;
+    grid-template-areas:
+        "title img"
+        "tagline img"
+        "description img"
+        "tags adresse"
+        "tags siteWeb"
+        "tags likes"
+    ;
+}
 
-    .siteWebVisit{
-        margin: auto;
-        text-align: center;
-    }
+.siteWebVisit {
+    margin: auto;
+    text-align: center;
+}
 
 /*style visit card*/
-.visit-card{
+.visit-card {
     background-color: white;
     border-radius: 15px;
     margin: 15px auto 15px auto;
     display: grid;
-    grid-template-columns: 3fr 1fr ;
-    padding:25px;
-    grid-template-areas: 
+    grid-template-columns: 3fr 1fr;
+    padding: 25px;
+    grid-template-areas:
         "title title"
         "img img"
         "adresse adresse"
@@ -628,42 +642,42 @@ li{
         "siteWeb siteWeb"
         "tags likes"
     ;
-   }
+}
 
-.nomMonument{
+.nomMonument {
     grid-area: title;
     margin-block-start: 0;
 }
 
-.imgMonument{
+.imgMonument {
     grid-area: img;
     border-radius: 15px;
     width: 100%;
-    
+
 }
 
-.siteWebVisit{
+.siteWebVisit {
     grid-area: siteWeb;
     color: #127D87;
-    font-weight:bolder;
+    font-weight: bolder;
     text-decoration: underline;
-    padding:0px;
+    padding: 0px;
 }
 
-.nbrLikesVisit{
+.nbrLikesVisit {
     font-weight: bold;
-    color:#127D87;
+    color: #127D87;
 }
 
 /*style hotel card*/
-.hotel-card{
+.hotel-card {
     background-color: white;
     border-radius: 15px;
     margin: 15px auto 15px auto;
     display: grid;
-    grid-template-columns: 3fr 1fr ;
-    padding:25px;
-    grid-template-areas: 
+    grid-template-columns: 3fr 1fr;
+    padding: 25px;
+    grid-template-areas:
         "title title"
         "img img"
         "adresse adresse"
@@ -672,28 +686,61 @@ li{
         "siteWeb siteWeb"
         "tags likes"
     ;
-   }
+}
 
-.nomHotel{
+.nomHotel {
     grid-area: title;
     margin-block-start: 0;
 }
 
-.imgHotel{
+.imgHotel {
     grid-area: img;
     border-radius: 15px;
-    width: 100%; 
+    width: 100%;
 }
 
-.siteWebHotel{
+.siteWebHotel {
     grid-area: siteWeb;
     color: black;
-    font-weight:bolder;
+    font-weight: bolder;
     text-decoration: underline;
-    padding:0px;
+    padding: 0px;
 }
 
-.nbrLikesVisit{
+.nbrLikesVisit {
     font-weight: bold;
-    color:black;
+    color: black;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: calc(100%-20);
+    height: auto;
+    border-radius: 15px;
+    background-color: var(--white);
+    margin-top: 15px;
+    padding: 10px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 12px;
+    color: grey;
+}
+
+footer .about__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about__footer a {
+    color: #000
 }
