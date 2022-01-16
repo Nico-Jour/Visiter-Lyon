@@ -2,6 +2,7 @@
 
 html {
     font-family: 'Space Mono', sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -281,6 +282,44 @@ header h1 {
     text-align: center;
 }
 
+.developpers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1120px;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 10px;
+    margin: 10px auto auto auto;
+}
+
+.members .pictures img {
+    max-width: 70%;
+    border-radius: 15px;
+    max-height: 300px;
+}
+
+.members .pictures {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.pictures p {
+    font-size: 12px;
+}
+
+.developper__description {
+    text-align: justify;
+    margin: 20px auto 20px auto;
+}
+
+.developper__description a {
+    text-decoration: none;
+    color: salmon;
+}
+
 
 @media screen and (min-width : 1024px) {
 
@@ -399,8 +438,17 @@ header h1 {
         padding-bottom: 2em;
     }
 
-    .about__footer{
+    .about__footer {
         max-width: 1120px;
+    }
+
+    .members {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    .developper__description p {
+        width: 800px;
     }
 
 }
