@@ -47,6 +47,13 @@ html {
     padding: 0px;
 }
 
+#about{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(255,193,38,1) 100%, rgba(0,212,255,1) 100%);
+    margin: 0;
+    padding: 15px;
+}
+
 .screen {
     background-color: inherit;
     position: fixed;
@@ -324,7 +331,52 @@ header h1 {
     color: salmon;
 }
 
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 15px;
+    background-color: var(--white);
+    margin: 10px auto 10px auto;
+    border-radius: 15px;
+}
 
+.contact form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: left;
+}
+
+.contact form input{
+    border-radius: 15px;
+    border: black solid 1px;
+}
+
+form #prenom{
+    width: 10em;
+}
+form #nom{
+    width: 10em;
+}
+form #mail{
+    width: 20em;
+}
+form #message{
+    height: 75px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+form #submit{
+    align-self: center;
+    width: 10em;
+    height: 20px;
+    background-color: #020024;
+    color: var(--white);
+    margin-bottom: 20px;
+}
 @media screen and (min-width : 1024px) {
 
     header {
@@ -453,6 +505,10 @@ header h1 {
 
     .developper__description p {
         width: 800px;
+    }
+
+    .contact{
+        max-width: 1110px;
     }
 
 }
@@ -649,6 +705,11 @@ li {
         margin: auto;
         text-align: center;
     }
+
+    .contact{
+        align-items: center;
+    }
+
 
 }
 
