@@ -310,6 +310,10 @@ header h1 {
     font-size: 12px;
 }
 
+.pictures a {
+ color: #000;
+}
+
 .developper__description {
     text-align: justify;
     margin: 20px auto 20px auto;
